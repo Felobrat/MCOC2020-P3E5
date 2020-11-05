@@ -213,6 +213,43 @@ La evolucion de temperatura de los puntos señalados esta descrita por los sigui
 
 4. Explique ¿como cambia el código para el caso 3-D? ¿Como se imponen las condiciones de borde?
 
+Para poder llevar el caso a un problema 3D, es necesario realizar las siguientes modificaciones al codigo 2D.
+En primer lugar, se debe establecer una dimension de volumen, la que podemos llamar c. Luego, debemos definir subdivisiones del espacio que queremos en z, la cual llamaremos Nz, de tal manera que el diferencial en z dz= c/Nz y este sea igual al diferencial en dx y dy, quedando dx=dy=dz.
+
+Se debe modificar el vector u_k para tres dimensiones, esto es modificando desde el codigo:
+
+    - u_k=np.zeros[(Nx+1,Ny+1,Nz+1)]
+
+Luego de definido el vector inicial, debemos establecer la condicion inicial, la cual debe ser de la siguiente manera:
+
+    - u_k[: , : , :] = T_inicial
+
+Despues, se deben establecer las condiciones de borde de temperatura o gradiente, estando establecidas las de las 6 posiciones posibles. Esto se gace de la siguiente manera:
+
+     a.  Temperatura de la cara
+         eje x -> derecha: u_k[-1, :, :] = T_der
+               izquierda: u_k[ 0, :, :] = T_izq
+
+         eje y -> superior: u_k[ : , -1, :] = T_sup
+               inferior  : u_k[ : , 0 , : ] = T_inf
+
+
+          eje z -> profundidad   : u_k[ : , : , -1] = T_prof
+                      frente     : u_k[ : , : , 0] = T_fren
 
 
   
+       b. por gradiente:
+
+
+          eje x -> derecha: u_k[-1, :, :] = u_k[-2, :, :] - du/dx x dx
+                 izquierda: u_k[ 0, :, :] = u_k[-2, :, :] - du/dx x dx
+
+       eje y -> superior: u_k[ : , -1, :] = u_k[:, -2, :] - du/dy x dy
+              inferior  : u_k[ : , 0 , : ] = u_k[:,-2, :] - du/dy x dy
+
+
+       eje z -> profundidad   : u_k[ : , : , -1] = u_k[:, :, -2] - du/dz x dz
+                     frente   : u_k[ : , : , 0] = u_k[:, :, -2] - du/dz x dz
+                     
+se deben establecer 6 condiciones de borde, una para cada cara, esto por medio de un gradiente o de una temperatura ambiente. Establecido esto, se hace el mismo tratamiento temporal que para 2D.
