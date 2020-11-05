@@ -2,7 +2,7 @@
 
 
 * Caso 1: caso_1.py
-* Caso 2: caso_2.py con correccion de gradiente corregido
+* Caso 2: caso_2.py con correccion de gradiente.
 * Caso 3: caso_3.py
 * Caso 4: caso_4.py
 * Caso 5: caso_5.py
