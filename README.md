@@ -1,5 +1,15 @@
 # Entrega 5: Replicar casos 2-D para verificar
 
+
+* Caso 1: caso_1.py
+* Caso 2: caso_2.py con correccion de gradiente corregido
+* Caso 3: caso_3.py
+* Caso 4: caso_4.py
+* Caso 5: caso_5.py
+* Caso 6: caso_6.py
+* Caso 7 enunciado: caso_7_enunciado.py con datos del enunciado.
+* Caso 7: caso_7.py con gradiente corregido a temperatura.
+
 1. Descripción de como hay que cambiar las condiciones de borde, en el código.
    
 Para cambiar las condiciones de borde se debe considerar que los lados se representan de la siguiente forma:
@@ -46,7 +56,11 @@ Se obtiene el mismo grafico esperado, las condiciones de borde eran las señalad
   
     - Caso 2
 
-Las condiciones de borde señaladas no eran las mismas que las señalas, ya que el gradiente de temperatura del borde derecho no es 0°C, sino -10°C. Asi se corrige y se obtiene el siguiente grafco, igual al entregado.
+Las condiciones de borde señaladas no eran las mismas que entrega el grafico mostrado en l enunciado, ya que se obtiene una evolucion de temperatura de la fomra siguiente:
+
+![ev_caso_2_enunciado](https://user-images.githubusercontent.com/69157203/98280242-e0536e00-1f79-11eb-9cc9-06ee01f3572b.gif)
+
+Ya que el gradiente de temperatura del borde derecho no es 0°C, sino -10°C. Asi se corrige y se obtiene el siguiente grafco, igual al entregado.
 
 ![EvolucionT_caso_2](https://user-images.githubusercontent.com/69157203/98262783-c4919d00-1f64-11eb-81af-37f2a8d939b2.png)
 
