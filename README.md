@@ -122,7 +122,7 @@ La evolucion de temperatura de los puntos señalados esta descrita por los sigui
 ![EvolucionT_caso_7_puntos](https://user-images.githubusercontent.com/69157203/98265012-4b477980-1f67-11eb-8ea7-fa1d0724ccee.png)
 
 
-* Imágenes fijas para la distribución de temperatura en los tiempos 0h, 2h, 6h, 12h, 24h y un gif animado con toda la evolución de temperatura. 
+3. Imágenes fijas para la distribución de temperatura en los tiempos 0h, 2h, 6h, 12h, 24h y un gif animado con toda la evolución de temperatura. 
 
 - Caso 1
 
@@ -197,7 +197,7 @@ La evolucion de temperatura de los puntos señalados esta descrita por los sigui
 
 ![ev_caso_7](https://user-images.githubusercontent.com/69157203/98266990-a7ab9880-1f69-11eb-8480-3bad669c1d49.gif)
 
-* Explique ¿como cambia el código para el caso 3-D? ¿Como se imponen las condiciones de borde?
+4. Explique ¿como cambia el código para el caso 3-D? ¿Como se imponen las condiciones de borde?
 
 
 
